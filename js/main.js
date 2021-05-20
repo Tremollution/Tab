@@ -1,21 +1,21 @@
 let form = document.forms.mainform;
 let filter = document.forms.filter;
 let names = [
-    {name: 'Sergiy',    age: '20', city: 'Poltava'},
-    {name: 'Evgen',     age: '32', city: 'Kharkiv'},
-    {name: 'Vlad',      age: '12', city: 'Kiev'},
-    {name: 'Egor',      age: '43', city: 'Odesa'},
-    {name: 'Sergiy',    age: '24', city: 'Odesa'},
-    {name: 'Sergiy',    age: '24', city: 'Kiev'},
-    {name: 'Egor',      age: '32', city: 'Dnipro'},
-    {name: 'Vlad',      age: '24', city: 'Dnipro'},
-    {name: 'Vlad',      age: '20', city: 'Poltava'},
-    {name: 'Kolya',     age: '12', city: 'Kharkiv'},
-    {name: 'Kolya',     age: '20', city: 'Kiev'},
-    {name: 'Vadim',     age: '12', city: 'Kiev'},
-    {name: 'Petya',     age: '20', city: 'Zhitomir'},
-    {name: 'Vadim',     age: '24', city: 'Poltava'},
-    {name: 'Vlad',      age: '20', city: 'Zhitomir'},
+    {name: 'Sergiy',        age: '20', city: 'Poltava',  img: './files/People-Patient-Male-icon.png'},
+    {name: 'Evgen',         age: '32', city: 'Kharkiv',  img: './files/Office-Client-Male-Dark-icon.png'},
+    {name: 'Svetlana',      age: '12', city: 'Kiev',     img: './files/Office-Customer-Female-Dark-icon.png'},
+    {name: 'Elena',         age: '43', city: 'Odesa',    img: './files/Rest-Person-Coffee-Break-Female-Light-icon.png'},
+    {name: 'Sergiy',        age: '24', city: 'Odesa',    img: './files/Office-Client-Male-Light-icon.png'},
+    {name: 'Sergiy',        age: '24', city: 'Kiev',     img: './files/Office-Customer-Male-Dark-icon.png'},
+    {name: 'Elena',         age: '32', city: 'Dnipro',   img: './files/People-Patient-Female-icon.png'},
+    {name: 'Vadim',         age: '24', city: 'Dnipro',   img: './files/Office-Customer-Male-Light-icon.png'},
+    {name: 'Sergiy',        age: '20', city: 'Poltava',  img: './files/People-Doctor-Male-icon.png'},
+    {name: 'Kolya',         age: '12', city: 'Kharkiv',  img: './files/Age-Child-Male-Light-icon.png'},
+    {name: 'Kolya',         age: '20', city: 'Kiev',     img: './files/Person-Male-Dark-icon.png'},
+    {name: 'Vadim',         age: '12', city: 'Kiev',     img: './files/Person-Male-Light-icon.png'},
+    {name: 'Petya',         age: '20', city: 'Zhitomir', img: './files/Rest-Person-Coffee-Break-Male-Dark-icon.png'}    ,
+    {name: 'Vadim',         age: '24', city: 'Poltava',  img: './files/Rest-Person-Coffee-Break-Male-Light-icon.png'},
+    {name: 'Evgen',         age: '20', city: 'Zhitomir', img: './files/Medical-Army-Nurse-Male-Light-icon.png'},
 ];
 createStartList();
 function createStartList() {
@@ -23,7 +23,7 @@ function createStartList() {
         form.innerHTML += 
         `
         <label class="block">
-            <h6>Name: <span class="value">${value.name}</span></h6> <h6>Age: <span class="value">${value.age}</span></h6> <h6>City: <span class="value">${value.city}</span></h6>
+            <img src="${value.img}"><h6>Name: <span class="value">${value.name}</span></h6> <h6>Age: <span class="value">${value.age}</span></h6> <h6>City: <span class="value">${value.city}</span></h6>
         </label>
         `
     });
@@ -113,7 +113,7 @@ function createList() {
             form.innerHTML +=
             `
             <label class="block">
-                <h6>Name: <span class="value">${value.name}</span></h6> <h6>Age: <span class="value">${value.age}</span></h6> <h6>City: <span class="value">${value.city}</span></h6>
+                <img src="${value.img}"><h6>Name: <span class="value">${value.name}</span></h6> <h6>Age: <span class="value">${value.age}</span></h6> <h6>City: <span class="value">${value.city}</span></h6>
             </label>
             `
         }
@@ -122,3 +122,17 @@ function createList() {
 /* 
 
 */
+
+namesZ = [
+    {name: '1'},
+    {name: '2'},
+    {name: '3'},
+];
+
+arr1(namesZ, 'name')
+
+function arr1(namesZ, named) {
+    namesZ.forEach(function(value){
+        console.log(value[named])
+    })
+}

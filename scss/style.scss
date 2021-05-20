@@ -24,9 +24,8 @@ a {
 		border: 1px solid gray;
 		padding: 10px;
 		border-radius: 10px;
-	}
-	.block {
 		display: flex;
+		flex-wrap: wrap;
 	}
 	.block h6 {
 		width: 100%;
@@ -38,11 +37,26 @@ a {
 	.filter {
 		margin: 20px 0;
 	}
-	.filter label {
+	.filter label select{
 		margin: 0 20px;
 		border: 1px solid black;
+		border-radius: 4px;
 	}
 	.filter select option {
-		font-size: 10px;
+		font-size: 20px;
+	}
+	.mainform label {
+		border: 1px solid gray;
+		border-radius: 10px;
+		margin: 10px;
+		height: 200px;
+		width: 180px;
+		padding: 8px;
+	}
+	.mainform label img {
+		height: 70px;
+		width: 70px;
+		margin: 0 auto;
+		display: flex;
 	}
 }
