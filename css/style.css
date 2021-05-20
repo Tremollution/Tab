@@ -83,7 +83,7 @@ a {
 .head .mainform label img {
   height: 70px;
   width: 70px;
-  margin: 0 auto;
+  margin: 20px auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
