@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> SiteName </title>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="head">
+	<div class="container">
+		<div class="content">
+			<form name="filter" class="filter">
+				<label>
+					Выбор категории:
+					<select name="category">
+						<option>ВСЕ</option>
+					</select>
+				</label>
+				<label>
+					Выбор бренда:
+					<select name="brand" disabled>
+						<option>ВСЕ</option>
+					</select>
+				</label>
+				<label>
+					Макс. цена: <div class="current-price">40999₴</div>
+					<input name="price" value="40999" type="range" min="4000" max="40999" class="slider">
+				</label>
+			</form>
+			<form name="list" class="list"> 
+				<fieldset name="sort" class="sort">
+						<span> Сортировать по: </span>
+
+					<span>Цене:</span>
+					<label name="price" class="label active"> 
+						<input type="radio" name="radio" checked="checked" value="type1">Убыванию
+					</label class="label">
+					<label name="name" class="label">
+						<input type="radio" name="radio" value="type2" >Возростанию
+					</label>
+
+						<span>Имени:</span>
+					<label name="name" class="label">
+						<input type="radio" name="radio" value="type3">(А - я)
+					</label>
+					<label name="name" class="label">
+						<input type="radio" name="radio" value="type4">(Я - а)
+					</label>
+
+				</fieldset>
+				<fieldset name="products"></fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script src="./js/main.js"></script>
+</body>
+</html>
