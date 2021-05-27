@@ -1,0 +1,148 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	object-fit: scale-down;
+}
+.head {
+	display: flex;
+	justify-content: center;
+	.container {
+		margin-top: 100px;
+		max-width: 1024px;
+		width: 100%;
+	}
+	.content {}
+	.slider {
+		-webkit-appearance: none;
+		width: 40%;
+		height: 10px;
+		background: #d3d3d3;
+		outline: none;
+		opacity: 0.7;
+		-webkit-transition: .2s;
+		transition: opacity .2s;
+		border-radius: 5px;
+	}
+	.slider:hover {
+		opacity: 1;
+	}
+	.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 12px;
+	height: 12px;
+	background: #04AA6D;
+	cursor: pointer;
+	border-radius: 50%;
+	}
+	
+	.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: #04AA6D;
+	cursor: pointer;
+	}
+	.first-optiome { 
+		display: none;
+	}
+	.filter {
+		display: flex;
+		label {
+			border: 1px solid gray;
+			border-radius: 5px;
+			width: 100%;
+			padding: 10px;
+			margin: 0 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.first-option {
+			display: none;
+		}
+		label select {
+			width: 40%;
+		}
+	}
+	.list {
+		border: 1px solid gray;
+		border-radius: 5px;
+		width: 100%;
+		margin-top: 30px;
+		display: flex;
+		flex-wrap: wrap;
+		.block {
+			border: 1px solid rgb(216, 205, 205);
+			border-radius: 5px;
+			width: 200px;
+			height: 200px;
+			display: block;
+			padding: 10px;
+			margin: 5px;
+		}
+		.img {
+			height: 100px;
+			width: 100px;
+			display: flex;
+			margin: 5px auto;
+		}
+		h6 {
+			font-size: 12px;
+		}
+		.price {
+			display: flex;
+			justify-content: flex-end;
+			color: green;
+			font-size: 16px;
+		}
+		fieldset {
+			border: none;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		.sort {
+			margin: 5px 0px;
+			padding: 0px 30px;
+			width: 100%;
+			display: flex;
+			justify-content: flex-start;
+			border-bottom: 1px solid gray;
+		}
+		.sort span {
+			position: relative;
+			top: 4px;
+			margin-right: 10px;
+		}
+		.sort .label {
+			position: relative;
+			top: -2px;
+			border: 1px solid #dfdfdf;
+			border-radius: 5px;
+			background: #ffffff;
+			padding: 5px 10px;
+			margin-right: 10px;
+			transition: background 0.2s;
+			transition: border 0.2s;
+		}
+		.sort label input {
+			display: none;
+		}
+		.active {
+			background: rgb(224, 224, 224) !important;
+			border: 1px solid rgb(218, 218, 218) !important;
+			transition: background 0.2s;
+			transition: border 0.2s;
+		}
+		
+	}
+}
